@@ -3,7 +3,7 @@
 import { Settings, Database, FileSpreadsheet, Calendar } from 'lucide-react';
 
 export default function AdminSettings() {
-  const sheetsConfigured = !!process.env.NEXT_PUBLIC_GOOGLE_SHEETS_ID;
+  const sheetsConfigured = !!process.env.NEXT_PUBLIC_GOOGLE_SHEETS_SPREADSHEET_ID;
 
   return (
     <div className="p-6 space-y-6">

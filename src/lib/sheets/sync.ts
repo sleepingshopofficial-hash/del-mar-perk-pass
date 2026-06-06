@@ -43,7 +43,7 @@ async function getAccessToken(email: string, privateKey: string): Promise<string
 }
 
 export async function appendToGoogleSheet(sync: SyncData): Promise<boolean> {
-  const spreadsheetId = process.env.GOOGLE_SHEETS_SPREADSHEET_ID;
+  const spreadsheetId = process.env.GOOGLE_SHEETS_SPREADSHEET_ID || process.env.NEXT_PUBLIC_GOOGLE_SHEETS_SPREADSHEET_ID;
   const clientEmail = process.env.GOOGLE_SHEETS_CLIENT_EMAIL;
   const privateKey = process.env.GOOGLE_SHEETS_PRIVATE_KEY;
 
