@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-heading", display: "swap" });
@@ -20,7 +21,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${outfit.variable} ${inter.variable}`}>
-      <body className="min-h-screen bg-white text-navy antialiased">{children}</body>
+      <body className="min-h-screen bg-white text-navy antialiased">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
