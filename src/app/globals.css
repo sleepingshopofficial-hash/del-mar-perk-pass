@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #1B2A4A;
+  --color-navy-dark: #0F1B33;
+  --color-navy-light: #2A3F6A;
+  --color-orange: #F97316;
+  --color-orange-dark: #EA580C;
+  --color-orange-light: #FB923C;
+  --color-cookie-tan: #D4A574;
+  --color-cookie-light: #E8CDB0;
+  --color-cooling-blue: #38BDF8;
+  --color-cooling-dark: #0EA5E9;
+  --color-fair-red: #DC2626;
+  --color-success: #22C55E;
+  --color-error: #EF4444;
+  --color-warning: #F59E0B;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in-up { animation: fadeInUp 0.5s ease-out forwards; }
+.animate-fade-in { animation: fadeIn 0.4s ease-out forwards; }
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+
+/* Fair perk pass gradient */
+.fair-gradient {
+  background: linear-gradient(135deg, #1B2A4A 0%, #2A3F6A 50%, #1B2A4A 100%);
+}
+
+.fair-gradient-light {
+  background: linear-gradient(180deg, #FFF7ED 0%, #FFFFFF 50%, #F0F9FF 100%);
+}
